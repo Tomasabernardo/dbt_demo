@@ -1,0 +1,16 @@
+demo_dbt:
+  outputs:
+
+    dev:
+      type: bigquery
+      method: oauth
+      project: dbt-project-trainning-setup
+      dataset: dbt_demo
+
+    prod:
+      type: bigquery
+      method: oauth
+      project: dbt-project-trainning-setup
+      dataset: dbt_Demo_production
+
+  target: dev

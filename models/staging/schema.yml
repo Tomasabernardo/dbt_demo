@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: stg_dados_transacionais
+    columns: 
+      - name: ID_DATA
+        tests:
+          - not_null

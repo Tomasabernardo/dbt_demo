@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: Demo
+    database: dbt-project-trainning-setup
+    schema: dbt_Demo
+    tables:
+      - name: dados_transacionais
+      - name: dim_data
+      - name: hierarquia_cliente

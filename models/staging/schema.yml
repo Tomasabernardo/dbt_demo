@@ -2,7 +2,9 @@ version: 2
 
 models:
   - name: stg_dados_transacionais
+    description: "{{doc('dados_transacionais')}}"
     columns: 
       - name: ID_DATA
         tests:
           - not_null
+          - unique

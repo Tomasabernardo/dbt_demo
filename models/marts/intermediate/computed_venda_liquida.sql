@@ -1,5 +1,5 @@
 with venda_liquida as(
-    select SurrogateKey,ROUND(G_AVV020+IEC_Vendas+Descontos_Fixos+Descontos_Promocionais+Promocoes_Cruzadas,2) as Venda_Liquida, Rappel_e_Afins
+    select SurrogateKey,ROUND(G_AVV020+IEC_Vendas+Descontos_Fixos+Descontos_Promocionais+Promocoes_Cruzadas,2) as Venda_Liquida, IFNULL(cast(Rappel_e_Afins as FLOAT64),0) as Rappel_e_Afins
     from {{ref('stg_dados_transacionais')}}
 ),gastos_com_clientes as(
     select SurrogateKey,(Accoes_Sell_Out+Exclusivos_CNH+Descontos_PP+Outros+Coop_Gastos+Exclusivos_PV+Comparticipacoes_FM+Fundo_Mkt_Gastos+
